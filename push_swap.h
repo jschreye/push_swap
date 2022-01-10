@@ -16,6 +16,9 @@
 # include "./libft/libft.h"
 # include <stdio.h>
 
+void	ft_swap(long long int *tabnbr);
+void	ft_sort(long long int *tabnbr);
+
 typedef struct nbr
 {
 	int		i;

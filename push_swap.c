@@ -121,6 +121,8 @@ int	main(int argc, char **argv)
 		ft_check_doublon(tabnbr);
 		ft_check_size_int(tabnbr);
 		ft_sort(tabnbr);
+		printf("%lld\n", tabnbr[0]);
+		printf("%lld\n", tabnbr[1]);
 		free(tabnbr);
 	}
 	else if (argc > 2)
@@ -130,6 +132,7 @@ int	main(int argc, char **argv)
 		ft_check_doublon(tabnbr);
 		ft_check_size_int(tabnbr);
 		ft_sort(tabnbr);
+		free(tabnbr);
 	}
 	return (0);
 }
