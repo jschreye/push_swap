@@ -15,7 +15,12 @@
 void	ft_sort(t_stack stack)
 {
 	stack = ft_push_b(stack);
-	printf("%lld\n %lld\n", stack.stack_b[0], stack.stack_b[1]);
+	printf("tab %lld tab %lld tab %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2]);
+	printf("tab2 %lld tab2 %lld tab2 %lld\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2]);
 	stack = ft_push_b(stack);
-	printf("%lld\n %lld\n", stack.stack_b[0], stack.stack_b[1]);
+	printf("tab %lld tab %lld tab %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2]);
+	printf("tab2 %lld tab2 %lld tab2 %lld\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2]);
+	stack = ft_push_b(stack);
+	printf("tab %lld tab %lld tab %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2]);
+	printf("tab2 %lld tab2 %lld tab2 %lld\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2]);
 }

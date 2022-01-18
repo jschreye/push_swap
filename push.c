@@ -28,12 +28,12 @@ t_stack ft_push_b(t_stack stack)
         return (stack);
     stack = ft_realloc_one_more_b(stack);
     i = stack.size_b - 1;
+    stack.stack_b[0] = stack.stack_a[0];
     while (i > 0)
     {
         stack.stack_b[i] = stack.stack_b[i - 1];
         i--;
     }
-    stack.stack_b[0] = stack.stack_a[i];
      write(1, "pb\n", 3);
      return (stack);
 }

@@ -59,7 +59,7 @@ t_stack ft_realloc_one_more_b(t_stack stack)
         exit(0);
     stack.size_b++;
     ft_memcpy(stack.stack_b, new_ptr, stack.size_b);
-    free(stack.stack_b);
+    //free(stack.stack_b);
     return (stack);
 }
 
