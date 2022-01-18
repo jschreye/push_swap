@@ -16,13 +16,25 @@
 # include "./libft/libft.h"
 # include <stdio.h>
 
-void	ft_swap(long long int *tabnbr);
-void	ft_sort(long long int *tabnbr);
-
-typedef struct nbr
+typedef struct s_stack
 {
-	int		i;
-	int		j;
-}			t_nbr1;
+	long long int	*stack_a;
+	long long int	*stack_b;
+	int				size_a;
+	int				size_b;
+
+}					t_stack;
+
+t_stack	ft_check_error(int argc, char **argv, t_stack stack);
+t_stack	ft_swap(t_stack stack);
+void	ft_sort(t_stack stack);
+t_stack	ft_swapb(t_stack stack);
+t_stack	ft_swapab(t_stack stack);
+t_stack ft_push_a(t_stack stack);
+t_stack ft_push_b(t_stack stack);
+t_stack ft_realloc_one_more_a(t_stack stack);
+t_stack ft_realloc_delete_one_a(t_stack stack);
+t_stack ft_realloc_one_more_b(t_stack stack);
+t_stack ft_realloc_delete_one_b(t_stack stack);
 
 #endif

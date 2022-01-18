@@ -16,7 +16,7 @@ CFLAGS = -Wall -Werror -Wextra
 
 NAME = push_swap
 
-SRC = push_swap.c swap.c ft_sort.c
+SRC = push_swap.c swap.c ft_sort.c ft_check_error.c push.c ft_realloc.c
 
 all:
 		make -C libft

@@ -12,31 +12,43 @@
 
 #include "push_swap.h"
 
-void	ft_swap(long long int *tabnbr)
+t_stack	ft_swap(t_stack stack)
 {
 	int j;
-
-	j = 0;
-	j = tabnbr[0];
-	tabnbr[0] = tabnbr[1];
-	tabnbr[1] = j;
+	if (!stack.stack_a)
+		return (stack);
+	j = stack.stack_a[0];
+	stack.stack_a[0] = stack.stack_a[1];
+	stack.stack_a[1] = j;
 	write (1, "sa\n", 3);
+	return (stack);
 }
 
-void	ft_swapb(long long int *tabnbr)
+t_stack	ft_swapb(t_stack stack)
 {
 	int j;
-
-	j = 0;
-	j = tabnbr[0];
-	tabnbr[0] = tabnbr[1];
-	tabnbr[1] = j;
+	if (!stack.stack_b)
+		return (stack);
+	j = stack.stack_b[0];
+	stack.stack_b[0] = stack.stack_b[1];
+	stack.stack_b[1] = j;
 	write (1, "sb\n", 3);
+	return (stack);
 }
 
-void	ft_swapab(long long int *tabnbr, long long int *tabnbrb)
+t_stack	ft_swapab(t_stack stack)
 {
-	ft_swap(tabnbr);
-	ft_swapb(tabnbrb);
+	int	i;
+	int	j;
+
+	if (!stack.stack_a || stack.stack_b)
+		return (stack);
+	i = stack.stack_a[0];
+	j = stack.stack_b[0];
+	stack.stack_a[0] = stack.stack_a[1];
+	stack.stack_a[1] = i;
+	stack.stack_b[0] = stack.stack_b[1];
+	stack.stack_b[1] = j;
 	write (1, "ss\n", 3);
+	return (stack);
 }

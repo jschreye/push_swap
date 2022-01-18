@@ -10,4 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
 
+t_stack ft_push_a(t_stack stack)
+{
+    if (!stack.stack_b)
+        return (stack);
+    write(1, "pa\n", 3);
+    return (stack);
+}
+
+t_stack ft_push_b(t_stack stack)
+{
+    int i;
+
+    if (!stack.stack_a)
+        return (stack);
+    stack = ft_realloc_one_more_b(stack);
+    i = stack.size_b - 1;
+    while (i > 0)
+    {
+        stack.stack_b[i] = stack.stack_b[i - 1];
+        i--;
+    }
+    stack.stack_b[0] = stack.stack_a[i];
+     write(1, "pb\n", 3);
+     return (stack);
+}

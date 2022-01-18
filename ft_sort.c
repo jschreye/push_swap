@@ -12,16 +12,10 @@
 
 #include "push_swap.h"
 
-void	ft_sort(long long int *tabnbr)
+void	ft_sort(t_stack stack)
 {
-	int i;
-	int *tabnbrb;
-
-	i = 0;
-	tabnbrb = 0;
-	while(tabnbr[i])
-		i++;
-	tabnbrb = malloc(sizeof(int) * (i + 1));
-	if (tabnbr[0] > tabnbr[1])
-		ft_swap(tabnbr);
+	stack = ft_push_b(stack);
+	printf("%lld\n %lld\n", stack.stack_b[0], stack.stack_b[1]);
+	stack = ft_push_b(stack);
+	printf("%lld\n %lld\n", stack.stack_b[0], stack.stack_b[1]);
 }
