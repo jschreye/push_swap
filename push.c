@@ -23,16 +23,23 @@ t_stack ft_push_a(t_stack stack)
 t_stack ft_push_b(t_stack stack)
 {
     int i;
+    int j;
 
     if (!stack.stack_a)
         return (stack);
     stack = ft_realloc_one_more_b(stack);
-    i = stack.size_b - 1;
-    stack.stack_b[0] = stack.stack_a[0];
+    i = stack.size_a - 1;
+    j = 0;
     while (i > 0)
     {
         stack.stack_b[i] = stack.stack_b[i - 1];
         i--;
+    }
+    stack.stack_b[0] = stack.stack_a[0];
+    while (j < stack.size_a)
+    {      
+        stack.stack_a[j] = stack.stack_a[j + 1];
+        j++;
     }
      write(1, "pb\n", 3);
      return (stack);

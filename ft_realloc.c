@@ -58,7 +58,7 @@ t_stack ft_realloc_one_more_b(t_stack stack)
     if (!new_ptr)
         exit(0);
     stack.size_b++;
-    ft_memcpy(stack.stack_b, new_ptr, stack.size_b);
+    ft_memcpy(new_ptr, stack.stack_b, stack.size_b);
     //free(stack.stack_b);
     return (stack);
 }
@@ -71,7 +71,7 @@ t_stack ft_realloc_delete_one_b(t_stack stack)
         return (stack);
     new_ptr = malloc(stack.size_b - 1);
     stack.size_b--;
-    ft_memcpy(stack.stack_b, new_ptr, stack.size_b);
+    ft_memcpy(new_ptr, stack.stack_b, stack.size_b);
     free(stack.stack_b);
     return (stack);
 }
