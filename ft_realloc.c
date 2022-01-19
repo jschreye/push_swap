@@ -44,22 +44,28 @@ t_stack ft_realloc_delete_one_a(t_stack stack)
 
 t_stack ft_realloc_one_more_b(t_stack stack)
 {
-    long long int   *new_ptr;
+    long long int   *buff_ptr;
 
-    if (stack.size_b == 0)
+    buff_ptr = NULL;
+    if (stack.stack_b == 0)
     {
-        stack.stack_b = malloc(stack.size_b + 1);
+        stack.stack_b = malloc(stack.size_b);
         if (!stack.stack_b)
             exit(0);
         stack.size_b++;
         return (stack);
     }
-    new_ptr = malloc(stack.size_b + 1);
-    if (!new_ptr)
+    buff_ptr = malloc(stack.size_b);
+    if (!buff_ptr)
         exit(0);
+    ft_memcpy(buff_ptr, stack.stack_b, stack.size_b);
+    free(stack.stack_b);
+    stack.stack_b = malloc(stack.size_b);
+    if (!stack.stack_b)
+        exit(0);
+    ft_memcpy(stack.stack_b, buff_ptr, stack.size_b);
+    free(buff_ptr);
     stack.size_b++;
-    ft_memcpy(new_ptr, stack.stack_b, stack.size_b);
-    //free(stack.stack_b);
     return (stack);
 }
 

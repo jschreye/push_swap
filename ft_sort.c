@@ -34,4 +34,19 @@ void	ft_sort(t_stack stack)
 	stack = ft_push_b(stack);
 	printf("tab_a %lld tab_a %lld tab_a %lld tab_a %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2], stack.stack_a[3]);
 	printf("tab_b %lld tab_b %lld tab_b %lld tab_b %lld\n\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2], stack.stack_a[3]);
+	stack = ft_push_b(stack);
+	printf("tab_a %lld tab_a %lld tab_a %lld tab_a %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2], stack.stack_a[3]);
+	printf("tab_b %lld tab_b %lld tab_b %lld tab_b %lld\n\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2], stack.stack_a[3]);
+	stack = ft_push_a(stack);
+	printf("tab_a %lld tab_a %lld tab_a %lld tab_a %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2], stack.stack_a[3]);
+	printf("tab_b %lld tab_b %lld tab_b %lld tab_b %lld\n\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2], stack.stack_a[3]);
+	stack = ft_push_a(stack);
+	printf("tab_a %lld tab_a %lld tab_a %lld tab_a %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2], stack.stack_a[3]);
+	printf("tab_b %lld tab_b %lld tab_b %lld tab_b %lld\n\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2], stack.stack_a[3]);
+	stack = ft_push_a(stack);
+	printf("tab_a %lld tab_a %lld tab_a %lld tab_a %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2], stack.stack_a[3]);
+	printf("tab_b %lld tab_b %lld tab_b %lld tab_b %lld\n\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2], stack.stack_a[3]);
+	stack = ft_push_a(stack);
+	printf("tab_a %lld tab_a %lld tab_a %lld tab_a %lld\n", stack.stack_a[0], stack.stack_a[1], stack.stack_a[2], stack.stack_a[3]);
+	printf("tab_b %lld tab_b %lld tab_b %lld tab_b %lld\n\n", stack.stack_b[0], stack.stack_b[1], stack.stack_b[2], stack.stack_a[3]);
 }

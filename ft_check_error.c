@@ -22,6 +22,9 @@ t_stack	ft_ascii_to_int(char **tabstr, t_stack stack)
 	stack.stack_a = malloc(sizeof(long long int) * (stack.size_a));
 	if (!stack.stack_a)
 		exit(0);
+		stack.stack_b = malloc(sizeof(long long int) * (stack.size_a));
+	if (!stack.stack_b)
+		exit(0);
 	i = - 1;
 	while (tabstr[++i])
 		stack.stack_a[i] = ft_atoi(tabstr[i]);

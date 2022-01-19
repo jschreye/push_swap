@@ -14,8 +14,30 @@
 
 t_stack ft_push_a(t_stack stack)
 {
-    if (!stack.stack_b)
+    int i;
+
+    i = stack.size_a;
+    if (stack.size_b == 0)
         return (stack);
+    if (stack.size_a == 0)
+        stack.stack_a[0] = stack.stack_b[0];
+    if (stack.size_a > 0)
+    {
+        while (i > 0)
+        {
+            stack.stack_a[i] = stack.stack_a[i - 1];
+            i--;
+        }
+        stack.stack_a[0] = stack.stack_b[0];
+    }
+    i = 0;
+    while (i < stack.size_b)
+    {
+        stack.stack_b[i] = stack.stack_b[i + 1];
+        i++;
+    }
+    stack.size_a++;
+    stack.size_b--;
     write(1, "pa\n", 3);
     return (stack);
 }
@@ -23,24 +45,29 @@ t_stack ft_push_a(t_stack stack)
 t_stack ft_push_b(t_stack stack)
 {
     int i;
-    int j;
 
-    if (!stack.stack_a)
+    i = stack.size_b;
+    if (stack.size_a == 0)
         return (stack);
-    stack = ft_realloc_one_more_b(stack);
-    i = stack.size_a - 1;
-    j = 0;
-    while (i > 0)
+    if (stack.size_b == 0)
+        stack.stack_b[0] = stack.stack_a[0];
+    if (stack.size_b > 0)
     {
-        stack.stack_b[i] = stack.stack_b[i - 1];
-        i--;
+        while (i > 0)
+        {
+            stack.stack_b[i] = stack.stack_b[i - 1];
+            i--;
+        }
+        stack.stack_b[0] = stack.stack_a[0];
     }
-    stack.stack_b[0] = stack.stack_a[0];
-    while (j < stack.size_a)
-    {      
-        stack.stack_a[j] = stack.stack_a[j + 1];
-        j++;
+    i = 0;
+    while (i < stack.size_a)
+    {
+        stack.stack_a[i] = stack.stack_a[i + 1];
+        i++;
     }
-     write(1, "pb\n", 3);
-     return (stack);
+    stack.size_b++;
+    stack.size_a--;
+    write(1, "pb\n", 3);
+    return (stack);
 }
