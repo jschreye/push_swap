@@ -32,9 +32,12 @@ t_stack	ft_swapb(t_stack stack);
 t_stack	ft_swapab(t_stack stack);
 t_stack ft_push_a(t_stack stack);
 t_stack ft_push_b(t_stack stack);
-t_stack ft_realloc_one_more_a(t_stack stack);
-t_stack ft_realloc_delete_one_a(t_stack stack);
-t_stack ft_realloc_one_more_b(t_stack stack);
-t_stack ft_realloc_delete_one_b(t_stack stack);
+t_stack ft_rotate_a(t_stack stack);
+t_stack ft_rotate_b(t_stack stack);
+t_stack ft_rotate_a_b(t_stack stack);
+t_stack ft_reverse_a(t_stack stack);
+t_stack ft_reverse_b(t_stack stack);
+t_stack ft_reverse_a_b(t_stack stack);
+int	ft_check_sort_stack_a(t_stack stack);
 
 #endif

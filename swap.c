@@ -15,7 +15,7 @@
 t_stack	ft_swap(t_stack stack)
 {
 	int j;
-	if (!stack.stack_a)
+	if (stack.stack_a == 0)
 		return (stack);
 	j = stack.stack_a[0];
 	stack.stack_a[0] = stack.stack_a[1];
@@ -27,7 +27,7 @@ t_stack	ft_swap(t_stack stack)
 t_stack	ft_swapb(t_stack stack)
 {
 	int j;
-	if (!stack.stack_b)
+	if (stack.stack_b == 0)
 		return (stack);
 	j = stack.stack_b[0];
 	stack.stack_b[0] = stack.stack_b[1];
@@ -41,7 +41,7 @@ t_stack	ft_swapab(t_stack stack)
 	int	i;
 	int	j;
 
-	if (!stack.stack_a || stack.stack_b)
+	if (stack.stack_a == 0 || stack.stack_b == 0)
 		return (stack);
 	i = stack.stack_a[0];
 	j = stack.stack_b[0];
