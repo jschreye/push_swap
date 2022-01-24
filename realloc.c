@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   realloc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 09:57:17 by jschreye          #+#    #+#             */
-/*   Updated: 2022/01/07 14:51:03 by jschreye         ###   ########.fr       */
+/*   Created: 2022/01/06 10:42:03 by jschreye          #+#    #+#             */
+/*   Updated: 2022/01/06 11:08:37 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+t_stack ft_realloc_b(t_stack stack)
 {
-	t_stack stack;
+    int i;
 
-	stack.stack_a = NULL;
-	stack.stack_b = NULL;
-	stack.size_b = 0;
-	stack.count = 0;
-	stack = ft_check_error(argc, argv, stack);
-	stack = ft_sort(stack);
-	//printf("%d\n", stack.count);
-	free(stack.stack_a);
-	free(stack.stack_b);
-	return (0);
+    ft_memcpy(stack.stack_a, stack.stack_b, stack.size_b);
+    i = stack.size_b;
+    stack.size_a = stack.size_b;
+    while(stack.size_b > 0)
+    {
+        stack.stack_b[i] = 0;
+        i--;
+    }
+    return (stack);
 }
