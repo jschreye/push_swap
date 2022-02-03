@@ -32,8 +32,6 @@ t_stack ft_push_a(t_stack stack)
         stack.stack_b[i] = stack.stack_b[i + 1];
     stack.size_a++;
     stack.size_b--;
-    if (stack.size_b == 1)
-        stack.size_a--;
     write(1, "pa\n", 3);
     //stack.count++;
     return (stack);
@@ -59,8 +57,6 @@ t_stack ft_push_b(t_stack stack)
         stack.stack_a[i] = stack.stack_a[i + 1];
     stack.size_b++;
     stack.size_a--;
-    if (stack.size_a == 1)
-        stack.size_a--;
     write(1, "pb\n", 3);
     //stack.count++;
     return (stack);

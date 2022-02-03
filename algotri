@@ -1,0 +1,36 @@
+prendre la derniere valeur du tableau comme pivot
+
+30 
+si j ai 11 qui et plus petite je vais inverser la valeur que je suis en train de traiter avec l indice du pivot et augmenter le pivot de 1
+
+int pivot 
+
+pivot = stack.stack_a[stack.size_a - 1];
+        while (stack.size_a > 2 && stack.stack_a[0] != pivot)
+        {
+            if (stack.stack_a[0] < pivot)
+            {
+                stack = ft_push_b(stack);
+            }
+            else
+            {
+                if (stack.stack_a[0] > pivot)
+                    stack = ft_rotate_a(stack);
+                if ( stack.stack_a[0] == pivot)
+                {
+                    stack = ft_push_b(stack);
+                    pivot = stack.stack_a[stack.size_a - 1];
+                }
+                if (stack.stack_a[0] < pivot)
+                {
+                    stack = ft_push_b(stack);
+                    //pivot++;
+                }
+                else
+                {
+                    stack = ft_rotate_a(stack);
+                    //printf("\nsize A = %d\nsize B = %d\npivot = %d", stack.size_a, stack.size_b, pivot);
+                    //printf("\nPENDANT  TAB A / TAB B\npos1 %lld pos1 %lld\npos2 %lld pos2 %lld\npos3 %lld pos3 %lld\npos4 %lld pos4 %lld\npos5 %lld pos5 %lld\n", stack.stack_a[0], stack.stack_b[0], stack.stack_a[1], stack.stack_b[1], stack.stack_a[2], stack.stack_b[2], stack.stack_a[3], stack.stack_b[3], stack.stack_a[4], stack.stack_b[4]);
+                }
+            }
+        }

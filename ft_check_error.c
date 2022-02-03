@@ -67,12 +67,12 @@ void	ft_check_doublon(t_stack stack)
 
 	i = 0;
 	j = 0;
-	while (stack.size_a > 0)
+	while (j < stack.size_a)
 	{
-		i = j;
-		while (stack.stack_a[i])
+		i = j + 1;
+		while (i < stack.size_a)
 		{	
-			if (stack.stack_a[j] != stack.stack_a[i + 1])
+			if (stack.stack_a[j] != stack.stack_a[i])
 				i++;
 			else
 			{
@@ -81,7 +81,6 @@ void	ft_check_doublon(t_stack stack)
 			}
 		}
 		j++;
-		stack.size_a--;
 	}
 }
 
