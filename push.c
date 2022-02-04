@@ -33,7 +33,6 @@ t_stack ft_push_a(t_stack stack)
     stack.size_a++;
     stack.size_b--;
     write(1, "pa\n", 3);
-    //stack.count++;
     return (stack);
 }
 
@@ -58,6 +57,5 @@ t_stack ft_push_b(t_stack stack)
     stack.size_b++;
     stack.size_a--;
     write(1, "pb\n", 3);
-    //stack.count++;
     return (stack);
 }

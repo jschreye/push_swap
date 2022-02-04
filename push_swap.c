@@ -19,10 +19,8 @@ int	main(int argc, char **argv)
 	stack.stack_a = NULL;
 	stack.stack_b = NULL;
 	stack.size_b = 0;
-	stack.count = 0;
 	stack = ft_check_error(argc, argv, stack);
 	stack = ft_sort(stack);
-	//printf("%d\n", stack.count);
 	free(stack.stack_a);
 	free(stack.stack_b);
 	return (0);

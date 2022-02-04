@@ -22,7 +22,6 @@ t_stack	ft_swap(t_stack stack)
 	stack.stack_a[0] = stack.stack_a[1];
 	stack.stack_a[1] = j;
 	write (1, "sa\n", 3);
-	stack.count++;
 	return (stack);
 }
 
@@ -36,7 +35,6 @@ t_stack	ft_swapb(t_stack stack)
 	stack.stack_b[0] = stack.stack_b[1];
 	stack.stack_b[1] = j;
 	write (1, "sb\n", 3);
-	stack.count++;
 	return (stack);
 }
 

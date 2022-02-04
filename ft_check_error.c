@@ -14,7 +14,7 @@
 
 t_stack	ft_ascii_to_int(char **tabstr, t_stack stack)
 {
-	int				i;
+	int	i;
 
 	stack.size_a = 0;
 	while (tabstr[stack.size_a])

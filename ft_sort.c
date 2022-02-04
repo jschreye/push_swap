@@ -29,23 +29,6 @@ int    ft_check_sort_stack_a(t_stack stack)
     return (1);
 }
 
-int    ft_check_sort_stack_b(t_stack stack)
-{
-    int    i;
-    int    j;
-
-    i = 0;
-    while (i < stack.size_b - 1)
-    {
-        j = i + 1;
-        if (stack.stack_b[i] > stack.stack_b[j])
-            i++;
-        else
-            return (0);
-    }
-    return (1);
-}
-
 int ft_max(t_stack stack)
 {
     int i;
@@ -60,26 +43,6 @@ int ft_max(t_stack stack)
         i++;
     }
     return (max);
-}
-
-int ft_min(t_stack stack)
-{
-    int i;
-    int min;
-
-    i = 0;
-    min = stack.stack_a[0];
-    while (i < stack.size_a)
-    {
-        if (stack.stack_a[i] < min)
-        {
-            min = stack.stack_a[i];
-            i++;
-        }
-        else
-            i++;
-    }
-    return (min);
 }
 
 t_stack    ft_sort(t_stack stack)

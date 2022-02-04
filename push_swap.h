@@ -22,7 +22,6 @@ typedef struct s_stack
 	long long int	*stack_b;
 	int				size_a;
 	int				size_b;
-	int				count;
 
 }					t_stack;
 
