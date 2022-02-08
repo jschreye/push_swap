@@ -20,11 +20,15 @@ typedef struct s_stack
 {
 	long long int	*stack_a;
 	long long int	*stack_b;
+	long long int	*newTab;
+	long long int	*stack_a_bis;
 	int				size_a;
 	int				size_b;
-
 }					t_stack;
 
+int 	ft_min(t_stack stack);
+
+t_stack ft_sorted_index(t_stack stack);
 t_stack	ft_check_error(int argc, char **argv, t_stack stack);
 t_stack	ft_swap(t_stack stack);
 t_stack	ft_sort(t_stack stack);

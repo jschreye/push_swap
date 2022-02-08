@@ -47,17 +47,18 @@ int ft_max(t_stack stack)
 
 t_stack    ft_sort(t_stack stack)
 {
-    int mediane;
-    int i = 0;
+    int size;
+    int i;
     int j;
-    int max = 0;
+    int max;
 
+    i = 0;
     max = ft_max(stack);
-    mediane = stack.size_a;
+    size = stack.size_a;
     while (i < max)
     {
         j = 0;
-        while (j < mediane && !ft_check_sort_stack_a(stack))
+        while (j < size && !ft_check_sort_stack_a(stack))
         {
             if ((stack.stack_a[0] >> i) & 1)
                 stack = ft_rotate_a(stack);
