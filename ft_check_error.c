@@ -6,7 +6,7 @@
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 09:57:17 by jschreye          #+#    #+#             */
-/*   Updated: 2022/01/07 14:51:03 by jschreye         ###   ########.fr       */
+/*   Updated: 2022/02/10 09:41:07 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@ t_stack	ft_ascii_to_int(char **tabstr, t_stack stack)
 	stack.stack_a = malloc(sizeof(long long int) * (stack.size_a));
 	if (!stack.stack_a)
 		exit(0);
-		stack.stack_b = malloc(sizeof(long long int) * (stack.size_a));
+	stack.stack_b = malloc(sizeof(long long int) * (stack.size_a));
 	if (!stack.stack_b)
 		exit(0);
-	i = - 1;
+	i = -1;
 	stack.newtab = malloc(sizeof(long long int) * (stack.size_a));
-    if (!stack.newtab)
-        exit(0);
-    stack.stack_a_bis = malloc(sizeof(long long int) * (stack.size_a));
-    if (!stack.stack_a_bis)
-        exit(0);
+	if (!stack.newtab)
+		exit(0);
+	stack.stack_a_bis = malloc(sizeof(long long int) * (stack.size_a));
+	if (!stack.stack_a_bis)
+		exit(0);
 	while (tabstr[++i])
 	{
 		stack.stack_a[i] = ft_atoi(tabstr[i]);
@@ -94,14 +94,14 @@ void	ft_check_doublon(t_stack stack)
 	}
 }
 
-void	ft_check_size_int(long long int *nbr)
+void	ft_check_size_int(t_stack stack)
 {
 	int	i;
 
 	i = 0;
-	while (nbr[i])
+	while (i < stack.size_a)
 	{
-		if (nbr[i] > 2147483647 || nbr[i] < -2147483648)
+		if (stack.stack_a[i] > 2147483647 || stack.stack_a[i] < -2147483648)
 		{
 			write(1, "error\n", 6);
 			exit(0);
@@ -123,14 +123,14 @@ t_stack	ft_check_error(int argc, char **argv, t_stack stack)
 		stack = ft_ascii_to_int(array, stack);
 		ft_check_full_nbr(array);
 		ft_check_doublon(stack);
-		ft_check_size_int(stack.stack_a);
+		ft_check_size_int(stack);
 	}
 	else if (argc > 2)
 	{
 		stack = ft_ascii_to_int(argv + 1, stack);
 		ft_check_full_nbr(argv + 1);
 		ft_check_doublon(stack);
-		ft_check_size_int(stack.stack_a);
+		ft_check_size_int(stack);
 	}
 	return (stack);
 }

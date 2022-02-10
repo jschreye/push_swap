@@ -6,17 +6,17 @@
 #    By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/04 15:31:43 by jschreye          #+#    #+#              #
-#    Updated: 2022/01/05 13:38:05 by jschreye         ###   ########.fr        #
+#    Updated: 2022/02/09 11:53:30 by jschreye         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -g -O0 -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 NAME = push_swap
 
-SRC = push_swap.c swap.c ft_sort.c ft_check_error.c push.c rotate.c reverse.c ft_sorted_index.c
+SRC = push_swap.c swap.c ft_sort.c ft_check_error.c push.c rotate.c reverse.c ft_sorted_index.c sort_five.c sort_three.c
 
 all:
 		make -C libft

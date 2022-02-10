@@ -6,7 +6,7 @@
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:42:03 by jschreye          #+#    #+#             */
-/*   Updated: 2022/01/06 11:08:37 by jschreye         ###   ########.fr       */
+/*   Updated: 2022/02/10 09:52:54 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_stack	ft_swap(t_stack stack)
 {
-	int j;
-	
+	int	j;
+
 	if (stack.size_a == 0)
 		return (stack);
 	j = stack.stack_a[0];
@@ -27,7 +27,7 @@ t_stack	ft_swap(t_stack stack)
 
 t_stack	ft_swapb(t_stack stack)
 {
-	int j;
+	int	j;
 
 	if (stack.size_b == 0)
 		return (stack);

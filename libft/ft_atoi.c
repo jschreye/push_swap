@@ -6,12 +6,12 @@
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 12:58:50 by jschreye          #+#    #+#             */
-/*   Updated: 2022/01/07 12:33:56 by jschreye         ###   ########.fr       */
+/*   Updated: 2022/02/09 12:02:18 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/*static int	is_white_space(char *c)
+static int	is_white_space(char *c)
 {
 	if (*c == '\n' || *c == '\t' || *c == '\r'
 		|| *c == '\v' || *c == '\f' || *c == ' ')
@@ -43,8 +43,8 @@ long long int	ft_atoi(const char *str)
 		p++;
 	}
 	return (a * b);
-}*/
-long long int    ft_atoi(const char *str)
+}
+/*long long int    ft_atoi(const char *str)
 {
     int                i;
     long long int    number;
@@ -69,4 +69,4 @@ long long int    ft_atoi(const char *str)
     while (*(str + i) >= 48 && *(str + i) <= 57)
         number = number * 10 + *(str + i++) - '0';
     return (number * signe);
-}
+}*/
