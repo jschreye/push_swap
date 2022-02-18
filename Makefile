@@ -18,13 +18,17 @@ NAME = push_swap
 
 SRC = push_swap.c swap.c ft_sort.c ft_check_error.c push.c rotate.c reverse.c ft_sorted_index.c sort_five.c sort_three.c
 
-all:
+OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
 		make -C libft
-		$(CC) $(FLAGS) $(SRC) libft/libft.a -o $(NAME)
+		$(CC) $(FLAGS) $(OBJ) libft/libft.a -o $(NAME)
 	
 clean:
 		make clean -C libft
-		rm -rf $(NAME)
+		rm -rf $(OBJ)
 
 fclean: clean
 		make fclean -C libft
